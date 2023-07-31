@@ -12,7 +12,7 @@ from Crypto.Util.Padding import pad,unpad
 DIR_COMPLETE = os.path.join(os.getcwd() + '/uploads')
 DIR_DECRYPTED = os.path.join(os.getcwd() + '/decrypt')
 
-app = FastAPI()
+app = FastAPI() 
 
 origins = [
     "http://localhost:5173",
