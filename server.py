@@ -128,3 +128,13 @@ async def download_file(filename:str):
         return FileResponse(file_path,filename=filename)
     else:
         return {"error":'File not found'}
+    
+@app.get('/download/encrypt/success/{filename}')
+async def download_encrypt_sucess(filename:str):
+    os.remove(os.path.join('uploads',filename))
+    return {'status':"ok"}
+
+@app.get('/download/decrypt/success/{filename}')
+async def download_dcecrypt_success(filename:str):
+    os.remove(os.path.join('decrypt',filename))
+    return {'status':'ok'}
